@@ -31,6 +31,11 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
   const [isInView, setIsInView] = useState(false)
   const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 })
   const [resolvedColor, setResolvedColor] = useState<string>("rgb(0, 0, 0)")
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   const resolveColor = useCallback((colorValue: string | undefined): string => {
     if (typeof window === "undefined") {
@@ -220,6 +225,15 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
       intersectionObserver.disconnect()
     }
   }, [setupCanvas, updateSquares, drawGrid, width, height, isInView])
+
+  if (!isMounted) {
+    return (
+      <div
+        className={cn(`h-full w-full ${className}`)}
+        {...props}
+      />
+    )
+  }
 
   return (
     <div
