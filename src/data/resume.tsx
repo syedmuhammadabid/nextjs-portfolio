@@ -247,5 +247,12 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
       video: "",
     },
   ],
-  hackathons: [],
+  hackathons: [] as {
+    title: string;
+    dates: string;
+    location?: string;
+    description?: string;
+    image?: string;
+    links?: { title: string; href: string; icon?: React.ReactNode }[];
+  }[],
 } as const;
