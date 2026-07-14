@@ -7,12 +7,9 @@ import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Python } from "@/components/ui/svgs/python";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
-import { Kubernetes } from "@/components/ui/svgs/kubernetes";
-import { Csharp } from "@/components/ui/svgs/csharp";
 import { RubyOnRails } from "@/components/ui/svgs/rubyOnRails";
 import { Aws } from "@/components/ui/svgs/aws";
 import { Terraform } from "@/components/ui/svgs/terraform";
-import { Graphql } from "@/components/ui/svgs/graphql";
 import { GithubActions } from "@/components/ui/svgs/githubActions";
 
 export const DATA = {
@@ -22,9 +19,26 @@ export const DATA = {
   location: "Karachi, Pakistan",
   locationLink: "https://www.google.com/maps/place/karachi",
   description:
-    "Senior Full-Stack Software Engineer with 7+ years of experience building enterprise SaaS products.",
-  summary:
-    "Senior Full-Stack Software Engineer with 7+ years delivering scalable enterprise applications across publishing, e-commerce, and fintech. I help engineering teams ship faster by building modern React/Node.js/Rails architectures, automating CI/CD pipelines, and scaling cloud infrastructure on AWS. Led [Rails migrations eliminating 14+ CVEs](/#work), reduced frontend build time by 55%, and deployed production infrastructure using Terraform and ECS Fargate. Recently completed my [MS in Data Science](/#education) and currently exploring AI-powered software and intelligent automation.",
+    "Senior Full-Stack Engineer building scalable React, Next.js & Node.js applications that power enterprise SaaS.",
+  summary: `## Turning complex software into scalable, maintainable systems.
+
+I'm a Senior Full-Stack Engineer with over seven years of experience designing and delivering enterprise web applications using React, Next.js, Node.js, Ruby on Rails, and AWS.
+
+Throughout my career, I've worked on products serving thousands to millions of users, helping organizations modernize legacy platforms, improve engineering workflows, and deliver software faster without compromising reliability.
+
+Some of the initiatives I'm most proud of include:
+
+✅ **Modernized** two production Rails applications, eliminating **14+ critical security vulnerabilities**
+
+✅ **Reduced** JavaScript bundle size by **45%** while cutting frontend build time from **4 minutes to under 90 seconds**
+
+✅ **Improved** application performance by **40%** through architectural refactoring
+
+✅ **Designed** AWS infrastructure using Terraform across multiple production environments
+
+✅ **Built** CI/CD pipelines with automated testing, security scanning, and deployments
+
+I recently completed my Master's in Data Science, expanding my expertise into machine learning, data engineering, and AI-enabled software systems. I'm particularly interested in building intelligent applications where modern software engineering meets data and AI.`,
   avatarUrl: "/me.png",
   skills: [
     { name: "React", icon: ReactLight },
@@ -32,15 +46,12 @@ export const DATA = {
     { name: "TypeScript", icon: Typescript },
     { name: "Node.js", icon: Nodejs },
     { name: "Ruby on Rails", icon: RubyOnRails },
-    { name: "Python", icon: Python },
-    { name: "PostgreSQL", icon: Postgresql },
     { name: "AWS", icon: Aws },
-    { name: "Docker", icon: Docker },
-    { name: "Kubernetes", icon: Kubernetes },
     { name: "Terraform", icon: Terraform },
-    { name: "C#", icon: Csharp },
-    { name: "GraphQL", icon: Graphql },
+    { name: "Docker", icon: Docker },
+    { name: "PostgreSQL", icon: Postgresql },
     { name: "CI/CD", icon: GithubActions },
+    { name: "Python", icon: Python }
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -88,7 +99,7 @@ export const DATA = {
       start: "November 2024",
       end: "Present",
       description:
-        "Led Rails 5.2 → 7.2 and Ruby 2.6 → 3.2 migration for 2 production apps, eliminating 14+ critical CVEs and reducing CI build time by 20%. Optimised Webpack configuration reducing JS bundle size by 45% and cutting frontend build time from 4 min to under 90 seconds. Designed and deployed AWS cloud infrastructure (ECS Fargate, RDS, ALB, Route53, S3, CloudWatch) using Terraform IaC. Built GitLab CI/CD pipelines integrating SonarQube, Brakeman, and RuboCop for automated testing and security scanning.",
+        "Led the migration of two production applications from Rails 5.2 to 7.2 and Ruby 2.6 to 3.2, eliminating 14+ critical security vulnerabilities (CVEs) while reducing CI build times by 20%. Refactored a large-scale Subscription Management module, reducing SonarQube complexity by 35% and improving page load performance by 40%. Optimized the frontend build pipeline using Webpack code splitting and bundle analysis, reducing JavaScript bundle size by 45% and cutting build times from 4 minutes to under 90 seconds. Designed and deployed production-ready AWS infrastructure using Terraform, provisioning ECS Fargate, RDS, ALB, Route53, S3, and CloudWatch across multiple environments. Implemented GitLab CI/CD pipelines with automated testing, security scanning, and code quality checks using SonarQube, Brakeman, and RuboCop. Developed enterprise subscription features including upsell workflows, campaign management, configurable landing pages, Stripe payment integration, and AWS Cognito authentication. Strengthened application security by implementing XSS protection, enforcing coding standards, and resolving high-severity vulnerabilities across frontend and backend services. Mentored engineers through code reviews, architectural guidance, and engineering best practices.",
     },
     {
       company: "ACCEO Retail Solutions",
@@ -100,7 +111,7 @@ export const DATA = {
       start: "May 2021",
       end: "October 2024",
       description:
-        "Designed and developed a scalable mobile Point-of-Sale (mPOS) application with API design covering virtual cart, stock search, and shopping cart lifecycle management. Built a financial card management system with secure transaction handling and banking workflow integrations. Developed a custom CubeJS query builder with PostgreSQL-backed data pipelines for dynamic data filtering and self-serve business intelligence reporting. Delivered full-stack features using React.js, Redux, and Material UI.",
+        "Designed and developed a scalable Mobile Point-of-Sale (mPOS) platform supporting virtual carts, inventory search, and shopping cart lifecycle management for retail operations. Built secure financial card management services supporting transaction processing, banking integrations, and unit-tested business workflows. Architected a custom CubeJS query builder backed by PostgreSQL, enabling self-service analytics and dynamic business reporting for enterprise users. Delivered full-stack features using React.js, Redux, Node.js, and REST APIs while collaborating with distributed product, QA, and design teams in an Agile environment. Improved maintainability through reusable component design, modular architecture, and comprehensive unit testing.",
     },
     {
       company: "Daraz (Alibaba Group)",
@@ -112,7 +123,7 @@ export const DATA = {
       start: "October 2019",
       end: "April 2021",
       description:
-        "Built Daraz Travel, a full-stack ticket booking platform for intercity bus reservations serving thousands of daily transactions, including seat selection, checkout, payment integration, and admin dashboards. Developed Daraz University, a CMS platform for newsletters and seller stories within the Daraz Seller Center ecosystem. Optimised frontend performance and maintained REST APIs serving tens of millions of monthly active users across South Asia.",
+        "Built Daraz Travel, a full-stack ticket booking platform supporting seat selection, secure payments, booking management, and administrative operations. Developed Daraz University, a content management platform enabling newsletters and seller engagement for tens of thousands of active sellers. Optimized frontend performance and maintained scalable REST APIs serving tens of millions of monthly users across South Asia. Collaborated with cross-functional engineering teams to deliver customer-facing features in a high-traffic, large-scale e-commerce platform.",
     },
     {
       company: "Systems Limited",
@@ -124,7 +135,7 @@ export const DATA = {
       start: "December 2018",
       end: "September 2019",
       description:
-        "Developed mobile-friendly government portal modules for FAHR (UAE Federal Authority of Human Resources), digitising workforce capability management and HR workflows. Built B2B portal features for Etisalat enterprise clients including account management, bill payment, and purchasing workflows integrated with telecom backend systems.",
+        "Developed responsive government portal modules for the UAE Federal Authority of Human Resources (FAHR), digitizing workforce capability management and HR workflows. Implemented enterprise B2B portal features for Etisalat, including account management, bill payment, and purchasing workflows integrated with telecom backend systems. Delivered responsive, user-centric interfaces for enterprise and government clients while collaborating with cross-functional teams.",
     },
     {
       company: "Ciphers Lab",
@@ -136,7 +147,7 @@ export const DATA = {
       start: "January 2018",
       end: "November 2018",
       description:
-        "Built Queno, a mobile-responsive educational communication platform connecting schools and parents, delivering real-time collaboration and engagement features.",
+        "Built Queno, a web-based communication platform connecting schools and parents through real-time collaboration and messaging features. Developed frontend and backend modules focused on usability, responsiveness, and accessibility for non-technical users. Collaborated with product stakeholders to deliver new features throughout the software development lifecycle.",
     },
   ],
   education: [
