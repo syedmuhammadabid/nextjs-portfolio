@@ -25,7 +25,7 @@ export const DATA = {
     "Senior Full-Stack Software Engineer with 7+ years of experience building enterprise SaaS products.",
   summary:
     "Senior Full-Stack Software Engineer with 7+ years delivering scalable enterprise applications across publishing, e-commerce, and fintech. I help engineering teams ship faster by building modern React/Node.js/Rails architectures, automating CI/CD pipelines, and scaling cloud infrastructure on AWS. Led [Rails migrations eliminating 14+ CVEs](/#work), reduced frontend build time by 55%, and deployed production infrastructure using Terraform and ECS Fargate. Recently completed my [MS in Data Science](/#education) and currently exploring AI-powered software and intelligent automation.",
-  avatarUrl: "/me.webp",
+  avatarUrl: "/me.png",
   skills: [
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
@@ -44,7 +44,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/blog", icon: NotebookIcon, label: "Blog", disabled: true },
   ],
   contact: {
     email: "syedmuhammadabid110@gmail.com",
@@ -84,7 +84,7 @@ export const DATA = {
       badges: ["Remote"],
       location: "Oulu, Finland · Remote",
       title: "Senior Software Engineer",
-      logoUrl: "",
+      logoUrl: "/atexLogo.svg",
       start: "November 2024",
       end: "Present",
       description:
@@ -96,7 +96,7 @@ export const DATA = {
       badges: ["Remote"],
       location: "Markham, Canada · Remote",
       title: "Software Engineer",
-      logoUrl: "",
+      logoUrl: "/acceoLogo.png",
       start: "May 2021",
       end: "October 2024",
       description:
@@ -108,7 +108,7 @@ export const DATA = {
       badges: [],
       location: "Karachi, Pakistan",
       title: "Software Developer",
-      logoUrl: "",
+      logoUrl: "/darazLogo.png",
       start: "October 2019",
       end: "April 2021",
       description:
@@ -120,7 +120,7 @@ export const DATA = {
       badges: [],
       location: "Karachi, Pakistan",
       title: "Software Engineer",
-      logoUrl: "",
+      logoUrl: "/systemsLimitedLogo.jpg",
       start: "December 2018",
       end: "September 2019",
       description:
@@ -132,7 +132,7 @@ export const DATA = {
       badges: [],
       location: "Karachi, Pakistan",
       title: "Software Developer",
-      logoUrl: "",
+      logoUrl: "/ciphersLabLogo.png",
       start: "January 2018",
       end: "November 2018",
       description:
@@ -144,7 +144,7 @@ export const DATA = {
       school: "NED University of Engineering and Technology",
       href: "https://www.neduet.edu.pk",
       degree: "Master of Science — Data Science",
-      logoUrl: "",
+      logoUrl: "/nedLogo.png",
       start: "2024",
       end: "2026",
     },
@@ -152,7 +152,7 @@ export const DATA = {
       school: "University of Karachi (UBIT)",
       href: "https://ubit.uok.edu.pk",
       degree: "Bachelor of Engineering — Software Engineering",
-      logoUrl: "",
+      logoUrl: "/ubitLogo.jpg",
       start: "2015",
       end: "2018",
     },
