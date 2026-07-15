@@ -8,6 +8,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { JsonLd } from "@/components/json-ld";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import AnalyticsTracker from "@/components/analytics-tracker";
+import { GA_MEASUREMENT_ID, isAnalyticsEnabled } from "@/lib/analytics";
 
 // Centralised, intent-grouped keyword set. Grouping (role → stack → cloud → AI →
 // location → brand) keeps the list keyword-RICH but semantically coherent, which
@@ -225,8 +228,13 @@ export default function RootLayout({
               {children}
             </div>
             <Navbar />
+            {/* Captures every click/auxclick and forwards it to GA4. */}
+            <AnalyticsTracker />
           </TooltipProvider>
         </ThemeProvider>
+        {/* Google Analytics 4. Only injected when NEXT_PUBLIC_GA_ID is set, so
+            local/preview builds without the env var stay analytics-free. */}
+        {isAnalyticsEnabled ? <GoogleAnalytics gaId={GA_MEASUREMENT_ID} /> : null}
       </body>
     </html>
   );
