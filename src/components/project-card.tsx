@@ -88,6 +88,7 @@ export function ProjectCard({
           target="_blank"
           rel="noopener noreferrer"
           className="block"
+          aria-label={`Open ${title}`}
         >
           {video ? (
             <video
@@ -96,6 +97,7 @@ export function ProjectCard({
               loop
               muted
               playsInline
+              aria-label={`${title} preview`}
               className="w-full h-48 object-cover"
             />
           ) : image ? (

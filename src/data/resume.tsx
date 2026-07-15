@@ -12,6 +12,9 @@ import { Aws } from "@/components/ui/svgs/aws";
 import { Terraform } from "@/components/ui/svgs/terraform";
 import { GithubActions } from "@/components/ui/svgs/githubActions";
 
+const GlobeIcon = Icons.globe;
+const GithubIcon = Icons.github;
+
 export const DATA = {
   name: "Syed Muhammad Abid",
   initials: "SA",
@@ -242,7 +245,18 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
         "REST API",
         "TailwindCSS",
       ],
-      links: ["GitHub", "https://github.com/syedmuhammadabid/motivational-quotes-api"],
+      links: [
+        {
+          type: "Website",
+          href: "https://motivational-quotes.up.railway.app/",
+          icon: <GlobeIcon className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/syedmuhammadabid/motivational-quotes-api",
+          icon: <GithubIcon className="size-3" />,
+        },
+      ],
       image: "https://raw.githubusercontent.com/syedmuhammadabid/motivational-quotes-api/main/demo.gif",
       video: "",
     },
