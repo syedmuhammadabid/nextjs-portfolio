@@ -40,6 +40,8 @@ function ProjectImage({ src, alt }: Readonly<{ src: string; alt: string }>) {
     <img
       src={src}
       alt={alt}
+      loading="lazy"
+      decoding="async"
       className="w-full h-48 object-cover"
       onError={() => setImageError(true)}
     />
@@ -97,6 +99,7 @@ export function ProjectCard({
               loop
               muted
               playsInline
+              preload="none"
               aria-label={`${title} preview`}
               className="w-full h-48 object-cover"
             />

@@ -11,13 +11,15 @@ import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
   weight: ["400", "500", "600", "700"],
 });
 
 const geistMono = Geist_Mono({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
   variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -70,6 +72,12 @@ export default function RootLayout({
           geistMono.variable
         )}
       >
+        <link
+          rel="preconnect"
+          href="https://raw.githubusercontent.com"
+          crossOrigin="anonymous"
+        />
+        <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <TooltipProvider delayDuration={0}>
             <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">

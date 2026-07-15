@@ -7,7 +7,6 @@ interface BlurFadeProps {
   duration?: number;
   delay?: number;
   yOffset?: number;
-  blur?: string;
 }
 
 const BlurFade = ({
@@ -16,7 +15,6 @@ const BlurFade = ({
   duration = 0.4,
   delay = 0,
   yOffset = 6,
-  blur = "6px",
 }: BlurFadeProps) => {
   return (
     <div
@@ -26,7 +24,6 @@ const BlurFade = ({
           "--blur-fade-delay": `${0.04 + delay}s`,
           "--blur-fade-duration": `${duration}s`,
           "--blur-fade-y": `${-yOffset}px`,
-          "--blur-fade-blur": blur,
         } as CSSProperties
       }
     >

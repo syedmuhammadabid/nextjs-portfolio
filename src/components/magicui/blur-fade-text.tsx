@@ -25,7 +25,6 @@ const BlurFadeText = ({
             "--blur-fade-delay": `${delay}s`,
             "--blur-fade-duration": `${duration}s`,
             "--blur-fade-y": `${-yOffset}px`,
-            "--blur-fade-blur": "8px",
           } as CSSProperties
         }
       >
