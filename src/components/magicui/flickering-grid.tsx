@@ -36,6 +36,7 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const [isInView, setIsInView] = useState(false)
+  const [canAnimate, setCanAnimate] = useState(false)
   const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 })
   const [resolvedColor, setResolvedColor] = useState<string>("rgb(0, 0, 0)")
   const isMounted = useSyncExternalStore(
@@ -43,6 +44,27 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
     () => true,
     () => false,
   )
+
+  // Defer the canvas animation until the browser is idle after initial load so
+  // it doesn't compete with LCP/first paint. Skip entirely for reduced motion.
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches
+    if (prefersReducedMotion) return
+
+    const start = () => setCanAnimate(true)
+
+    if (typeof window.requestIdleCallback === "function") {
+      const handle = window.requestIdleCallback(start, { timeout: 2000 })
+      return () => window.cancelIdleCallback(handle)
+    }
+
+    const handle = window.setTimeout(start, 300)
+    return () => window.clearTimeout(handle)
+  }, [])
 
   const resolveColor = useCallback((colorValue: string | undefined): string => {
     if (typeof window === "undefined") {
@@ -222,7 +244,7 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
 
     intersectionObserver.observe(canvas)
 
-    if (isInView) {
+    if (isInView && canAnimate) {
       animationFrameId = requestAnimationFrame(animate)
     }
 
@@ -231,7 +253,7 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
       resizeObserver.disconnect()
       intersectionObserver.disconnect()
     }
-  }, [setupCanvas, updateSquares, drawGrid, width, height, isInView])
+  }, [setupCanvas, updateSquares, drawGrid, width, height, isInView, canAnimate])
 
   if (!isMounted) {
     return (
