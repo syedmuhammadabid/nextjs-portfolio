@@ -15,7 +15,7 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
-      <section id="hero">
+      <section id="hero" aria-label="Introduction">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
             <div className="gap-2 flex flex-col order-2 md:order-1">
@@ -23,6 +23,9 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
                 yOffset={8}
+                // Rendered as the single page <h1> — the primary on-page ranking
+                // signal — while keeping the existing visual style.
+                as="h1"
                 text={`Hi, I'm ${DATA.name.split(" ")[2]}`}
               />
               <BlurFadeText
@@ -45,10 +48,10 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="about">
+      <section id="about" aria-labelledby="about-heading">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <h2 className="text-xl font-bold">About</h2>
+            <h2 id="about-heading" className="text-xl font-bold">About</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
@@ -59,20 +62,20 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-      <section id="work">
+      <section id="work" aria-labelledby="work-heading">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Work Experience</h2>
+            <h2 id="work-heading" className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 6}>
             <WorkSection />
           </BlurFade>
         </div>
       </section>
-      <section id="education">
+      <section id="education" aria-labelledby="education-heading">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-bold">Education</h2>
+            <h2 id="education-heading" className="text-xl font-bold">Education</h2>
           </BlurFade>
           <div className="flex flex-col gap-8">
             {DATA.education.map((education, index) => (
@@ -119,10 +122,10 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="skills">
+      <section id="skills" aria-labelledby="skills-heading">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
+            <h2 id="skills-heading" className="text-xl font-bold">Skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-2">
             {DATA.skills.map((skill, id) => (
@@ -136,12 +139,12 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="projects">
+      <section id="projects" aria-label="Projects">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <ProjectsSection />
         </BlurFade>
       </section>
-      <section id="contact">
+      <section id="contact" aria-label="Contact">
         <BlurFade delay={BLUR_FADE_DELAY * 16}>
           <ContactSection />
         </BlurFade>

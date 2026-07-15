@@ -7,15 +7,24 @@ import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Thoughts on software development, life, and more.",
+  description:
+    "Articles on React, Next.js, TypeScript, Node.js, cloud architecture and full-stack engineering by Syed Muhammad Abid.",
+  // Self-referencing canonical for the blog index.
+  alternates: {
+    canonical: "/blog",
+  },
   openGraph: {
     title: "Blog",
-    description: "Thoughts on software development, life, and more.",
+    description:
+      "Articles on React, Next.js, TypeScript, Node.js, cloud architecture and full-stack engineering by Syed Muhammad Abid.",
+    type: "website",
+    url: "/blog",
   },
   twitter: {
     card: "summary_large_image",
     title: "Blog",
-    description: "Thoughts on software development, life, and more.",
+    description:
+      "Articles on React, Next.js, TypeScript, Node.js, cloud architecture and full-stack engineering by Syed Muhammad Abid.",
   },
 };
 

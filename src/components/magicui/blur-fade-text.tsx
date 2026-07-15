@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import type { CSSProperties } from "react";
+import type { CSSProperties, ElementType } from "react";
 
 interface BlurFadeTextProps {
   text: string;
@@ -7,6 +7,9 @@ interface BlurFadeTextProps {
   duration?: number;
   delay?: number;
   yOffset?: number;
+  // Lets callers control the rendered element (e.g. render the hero greeting as
+  // an <h1>) without changing the visual styling. Defaults to a <span>.
+  as?: ElementType;
 }
 
 const BlurFadeText = ({
@@ -15,10 +18,11 @@ const BlurFadeText = ({
   duration = 0.4,
   delay = 0,
   yOffset = 8,
+  as: Component = "span",
 }: BlurFadeTextProps) => {
   return (
     <div className="flex">
-      <span
+      <Component
         className={cn("blur-fade inline-block", className)}
         style={
           {
@@ -29,7 +33,7 @@ const BlurFadeText = ({
         }
       >
         {text}
-      </span>
+      </Component>
     </div>
   );
 };

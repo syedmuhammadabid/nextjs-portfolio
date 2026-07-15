@@ -17,10 +17,23 @@ const GithubIcon = Icons.github;
 
 export const DATA = {
   name: "Syed Muhammad Abid",
+  // Full legal name — surfaced in Schema.org Person markup so search/AI engines
+  // can associate the brand ("Syed Muhammad Abid") with the full identity.
+  fullName: "Syed Muhammad Abid Hussain",
   initials: "SA",
-  url: "https://github.com/syedmuhammadabid",
+  // Canonical production domain. This MUST be the live site (not the GitHub
+  // profile) because it powers `metadataBase`, canonical URLs, Open Graph
+  // `og:url`, sitemap entries and every absolute URL used for SEO.
+  url: "https://syedmuhammadabid.dev",
+  jobTitle: "Senior Full-Stack Engineer",
   location: "Karachi, Pakistan",
   locationLink: "https://www.google.com/maps/place/karachi",
+  // Structured address used by the Schema.org PostalAddress node.
+  address: {
+    locality: "Karachi",
+    region: "Sindh",
+    country: "PK",
+  },
   description:
     "Senior Full-Stack Engineer building scalable React, Next.js & Node.js applications that power enterprise SaaS.",
   summary: `## Turning complex software into scalable, maintainable systems.

@@ -47,6 +47,10 @@ export async function generateMetadata({
   return {
     title,
     description,
+    // Per-post canonical so paginated/query variants don't split ranking signals.
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
     openGraph: {
       title,
       description,
@@ -98,19 +102,58 @@ export default async function Blog({
 
   const jsonLdContent = JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
-    description: post.summary,
-    image: post.image
-      ? `${DATA.url}${post.image}`
-      : `${DATA.url}/blog/${slug}/opengraph-image`,
-    url: `${DATA.url}/blog/${slug}`,
-    author: {
-      "@type": "Person",
-      name: DATA.name,
-    },
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        headline: post.title,
+        datePublished: post.publishedAt,
+        dateModified: post.publishedAt,
+        description: post.summary,
+        image: post.image
+          ? `${DATA.url}${post.image}`
+          : `${DATA.url}/blog/${slug}/opengraph-image`,
+        url: `${DATA.url}/blog/${slug}`,
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `${DATA.url}/blog/${slug}`,
+        },
+        author: {
+          "@type": "Person",
+          name: DATA.fullName,
+          url: DATA.url,
+        },
+        publisher: {
+          "@type": "Person",
+          name: DATA.fullName,
+          url: DATA.url,
+        },
+      },
+      {
+        // Breadcrumb trail (Home → Blog → Post) enables breadcrumb rich results
+        // and helps crawlers understand site hierarchy.
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: DATA.url,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blog",
+            item: `${DATA.url}/blog`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: post.title,
+            item: `${DATA.url}/blog/${slug}`,
+          },
+        ],
+      },
+    ],
   }).replace(/</g, "\\u003c");
 
   return (

@@ -11,7 +11,12 @@ import { DATA } from "@/data/resume";
 
 export default function Navbar() {
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30">
+    // Semantic <nav> landmark so assistive tech and crawlers recognise the
+    // primary navigation / social links region.
+    <nav
+      aria-label="Primary"
+      className="pointer-events-none fixed inset-x-0 bottom-4 z-30"
+    >
       <Dock className="z-50 pointer-events-auto relative h-14 p-2 w-fit mx-auto flex gap-2 border bg-card/90 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5">
         {DATA.navbar
           .filter((item) => !("disabled" in item && item.disabled))
@@ -96,6 +101,6 @@ export default function Navbar() {
           </TooltipContent>
         </Tooltip>
       </Dock>
-    </div>
+    </nav>
   );
 }
