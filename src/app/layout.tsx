@@ -144,9 +144,18 @@ export const metadata: Metadata = {
   },
   // Links the generated PWA manifest (app/manifest.ts).
   manifest: "/manifest.webmanifest",
+  // Search-engine ownership verification. Paste ONLY the token (the `content`
+  // value) from each tool — Next.js renders the correct <meta> tag for you.
+  //   • google → Google Search Console → "HTML tag" method
+  //   • other["msvalidate.01"] → Bing Webmaster Tools → "meta tag" method
+  //   • yandex → Yandex Webmaster (optional)
+  // Leave a value as "" to skip emitting that tag.
   verification: {
-    google: "",
-    yandex: "",
+    google: "wdOvzWfXti4b0XspEp6ouis7N2SvprfGEF9Ihto3uYc", // e.g. "AbC123xyz..."
+    yandex: "", // optional
+    other: {
+      "msvalidate.01": "", // Bing token, e.g. "XYZ789..."
+    },
   },
 };
 
