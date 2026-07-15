@@ -44,15 +44,15 @@ Throughout my career, I've worked on products serving thousands to millions of u
 
 Some of the initiatives I'm most proud of include:
 
-✅ **Modernized** two production Rails applications, eliminating **14+ critical security vulnerabilities**
+ **Modernized** two production Rails applications, eliminating **14+ critical security vulnerabilities**
 
-✅ **Reduced** JavaScript bundle size by **45%** while cutting frontend build time from **4 minutes to under 90 seconds**
+ **Reduced** JavaScript bundle size by **45%** while cutting frontend build time from **4 minutes to under 90 seconds**
 
-✅ **Improved** application performance by **40%** through architectural refactoring
+ **Improved** application performance by **40%** through architectural refactoring
 
-✅ **Designed** AWS infrastructure using Terraform across multiple production environments
+ **Designed** AWS infrastructure using Terraform across multiple production environments
 
-✅ **Built** CI/CD pipelines with automated testing, security scanning, and deployments
+ **Built** CI/CD pipelines with automated testing, security scanning, and deployments
 
 I recently completed my Master's in Data Science, expanding my expertise into machine learning, data engineering, and AI-enabled software systems. I'm particularly interested in building intelligent applications where modern software engineering meets data and AI.`,
   avatarUrl: "/me.png",
