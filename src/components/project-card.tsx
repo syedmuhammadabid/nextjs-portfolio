@@ -8,11 +8,32 @@ import Link from "next/link";
 import { useState } from "react";
 import Markdown from "react-markdown";
 
-function ProjectImage({ src, alt }: { src: string; alt: string }) {
+function getInitials(title: string) {
+  return title
+    .split(" ")
+    .filter((word) => /^[a-zA-Z]/.test(word))
+    .map((word) => word[0])
+    .join("")
+    .slice(0, 3)
+    .toUpperCase();
+}
+
+function ProjectPlaceholder({ title }: Readonly<{ title: string }>) {
+  return (
+    <div className="relative flex h-48 w-full items-center justify-center overflow-hidden bg-linear-to-br from-muted via-background to-muted">
+      <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_1px_1px,var(--color-border)_1px,transparent_0)] bg-size-[16px_16px]" />
+      <span className="relative text-4xl font-bold tracking-tight text-muted-foreground/70">
+        {getInitials(title)}
+      </span>
+    </div>
+  );
+}
+
+function ProjectImage({ src, alt }: Readonly<{ src: string; alt: string }>) {
   const [imageError, setImageError] = useState(false);
 
   if (!src || imageError) {
-    return <div className="w-full h-48 bg-muted" />;
+    return <ProjectPlaceholder title={alt} />;
   }
 
   return (
@@ -80,14 +101,14 @@ export function ProjectCard({
           ) : image ? (
             <ProjectImage src={image} alt={title} />
           ) : (
-            <div className="w-full h-48 bg-muted" />
+            <ProjectPlaceholder title={title} />
           )}
         </Link>
         {links && links.length > 0 && (
           <div className="absolute top-2 right-2 flex flex-wrap gap-2">
             {links.map((link, idx) => (
               <Link
-                href={link.href}
+                href={link.href || "#"}
                 key={idx}
                 target="_blank"
                 rel="noopener noreferrer"

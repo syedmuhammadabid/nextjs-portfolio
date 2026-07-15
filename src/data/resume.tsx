@@ -79,7 +79,7 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
         icon: Icons.x,
         navbar: false,
       },
-      email: {
+      Email: {
         name: "Send Email",
         url: "mailto:syedmuhammadabid110@gmail.com",
         icon: Icons.email,
@@ -171,7 +171,7 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
   projects: [
     {
       title: "Enterprise Publishing & Subscription Platform",
-      href: "#",
+      href: "https://mytype.kayak.atexcloud.io/",
       dates: "Nov 2024 - Present",
       active: true,
       description:
@@ -192,7 +192,7 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
     },
     {
       title: "Subscription Management API",
-      href: "#",
+      href: "https://github.com/syedmuhammadabid/subscription-api",
       dates: "2025",
       active: true,
       description:
@@ -210,7 +210,7 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
     },
     {
       title: "Multi-Source ETL Data Pipeline",
-      href: "#",
+      href: "https://github.com/syedmuhammadabid/etl-pipeline",
       dates: "2024 - 2025",
       active: true,
       description:
@@ -228,24 +228,43 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
       video: "",
     },
     {
-      title: "PSX Fundamental Analysis Platform",
-      href: "#",
-      dates: "2025 - Present",
+      title: "Motivational Quotes API",
+      href: "https://motivational-quotes.up.railway.app/",
+      dates: "2026",
       active: true,
       description:
-        "Developing a stock analysis platform for the Pakistan Stock Exchange with financial analysis, valuation ratios, technical indicators, dividend history, and AI-powered insights.",
+        "A simple REST API built with FastAPI that serves random motivational quotes, with an interactive UI to browse and discover them.",
       technologies: [
         "Next.js",
         "TypeScript",
         "Python",
-        "PostgreSQL",
-        "AI/LLM",
+        "FastAPI",
+        "REST API",
         "TailwindCSS",
       ],
-      links: [],
-      image: "",
+      links: ["GitHub", "https://github.com/syedmuhammadabid/motivational-quotes-api"],
+      image: "https://raw.githubusercontent.com/syedmuhammadabid/motivational-quotes-api/main/demo.gif",
       video: "",
     },
+    // {
+    //   title: "PSX Fundamental Analysis Platform",
+    //   href: "#",
+    //   dates: "2025 - Present",
+    //   active: false,
+    //   description:
+    //     "Developing a stock analysis platform for the Pakistan Stock Exchange with financial analysis, valuation ratios, technical indicators, dividend history, and AI-powered insights.",
+    //   technologies: [
+    //     "Next.js",
+    //     "TypeScript",
+    //     "Python",
+    //     "PostgreSQL",
+    //     "AI/LLM",
+    //     "TailwindCSS",
+    //   ],
+    //   links: [],
+    //   image: "",
+    //   video: "",
+    // },
   ],
   hackathons: [] as {
     title: string;

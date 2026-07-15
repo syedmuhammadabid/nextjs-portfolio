@@ -17,7 +17,7 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
 
   if (!src || imageError) {
     return (
-      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
+      <div className="size-11 md:size-13 p-0.5 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
     );
   }
 
@@ -25,9 +25,9 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
     <Image
       src={src}
       alt={alt}
-      width={40}
-      height={40}
-      className="size-8 md:size-10 p-1.5 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain bg-white flex-none"
+      width={52}
+      height={52}
+      className="size-11 md:size-13 p-0.5 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain bg-white flex-none"
       onError={() => setImageError(true)}
     />
   );
@@ -79,7 +79,7 @@ export default function WorkSection() {
               </div>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="p-0 ml-13 text-xs sm:text-sm text-muted-foreground">
+          <AccordionContent className="p-0 ml-14 md:ml-16 text-xs sm:text-sm text-muted-foreground">
             {work.description}
           </AccordionContent>
         </AccordionItem>
