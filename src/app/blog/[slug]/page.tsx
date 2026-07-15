@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXContent } from "@content-collections/mdx/react";
 import { mdxComponents } from "@/mdx-components";
-import Link from "next/link";
+import { TrackedLink } from "@/components/tracked-link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function getSortedPosts() {
@@ -166,10 +166,10 @@ export default async function Blog({
         }}
       />
       <div className="flex justify-start gap-4 items-center">
-        <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors border border-border rounded-lg px-2 py-1 inline-flex items-center gap-1 mb-6 group" aria-label="Back to Blog">
+        <TrackedLink href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors border border-border rounded-lg px-2 py-1 inline-flex items-center gap-1 mb-6 group" aria-label="Back to Blog" event="blog_back_click" eventParams={{ from: post.title }}>
           <ChevronLeft className="size-3 group-hover:-translate-x-px transition-transform" />
           Back to Blog
-        </Link>
+        </TrackedLink>
       </div>
       <div className="flex flex-col gap-4">
         <h1 className="title font-semibold text-3xl md:text-4xl tracking-tighter leading-tight">
@@ -197,9 +197,11 @@ export default async function Blog({
       <nav className="mt-12 pt-8 max-w-2xl">
         <div className="flex flex-col sm:flex-row justify-between gap-4">
           {previousPost ? (
-            <Link
+            <TrackedLink
               href={`/blog/${getSlug(previousPost)}`}
               className="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors"
+              event="blog_post_nav_click"
+              eventParams={{ direction: "previous", slug: getSlug(previousPost), title: previousPost.title }}
             >
               <span className="flex items-center gap-1 text-xs text-muted-foreground">
                 <ChevronLeft className="size-3" />
@@ -208,15 +210,17 @@ export default async function Blog({
               <span className="text-sm font-medium group-hover:text-foreground transition-colors whitespace-normal wrap-break-word">
                 {previousPost.title}
               </span>
-            </Link>
+            </TrackedLink>
           ) : (
             <div className="hidden sm:block flex-1" />
           )}
 
           {nextPost ? (
-            <Link
+            <TrackedLink
               href={`/blog/${getSlug(nextPost)}`}
               className="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors text-right"
+              event="blog_post_nav_click"
+              eventParams={{ direction: "next", slug: getSlug(nextPost), title: nextPost.title }}
             >
               <span className="flex items-center justify-end gap-1 text-xs text-muted-foreground">
                 Next
@@ -225,7 +229,7 @@ export default async function Blog({
               <span className="text-sm font-medium group-hover:text-foreground transition-colors whitespace-normal wrap-break-word">
                 {nextPost.title}
               </span>
-            </Link>
+            </TrackedLink>
           ) : (
             <div className="hidden sm:block flex-1" />
           )}

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { TrackedLink } from "@/components/tracked-link";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { DATA } from "@/data/resume";
 
@@ -25,14 +25,16 @@ export default function ContactSection() {
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
           Want to chat? Just shoot me a message{" "}
-          <Link
+          <TrackedLink
             href={DATA.contact.social.LinkedIn.url}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+            event="contact_click"
+            eventParams={{ network: "LinkedIn", href: DATA.contact.social.LinkedIn.url }}
           >
             on LinkedIn
-          </Link>{" "}
+          </TrackedLink>{" "}
           and I&apos;ll respond whenever I can.
         </p>
       </div>

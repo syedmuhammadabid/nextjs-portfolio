@@ -2,12 +2,12 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { DATA } from "@/data/resume";
 import Image from "next/image";
-import Link from "next/link";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
+import { TrackedLink } from "@/components/tracked-link";
 import { ArrowUpRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -83,11 +83,13 @@ export default function Page() {
                 key={education.school}
                 delay={BLUR_FADE_DELAY * 8 + index * 0.05}
               >
-                <Link
+                <TrackedLink
                   href={education.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-x-3 justify-between group"
+                  event="education_click"
+                  eventParams={{ school: education.school, href: education.href }}
                 >
                   <div className="flex items-center gap-x-3 flex-1 min-w-0">
                     {education.logoUrl ? (
@@ -116,7 +118,7 @@ export default function Page() {
                       {education.start} - {education.end}
                     </span>
                   </div>
-                </Link>
+                </TrackedLink>
               </BlurFade>
             ))}
           </div>

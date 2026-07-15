@@ -1,6 +1,6 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { allPosts } from "content-collections";
-import Link from "next/link";
+import { TrackedLink } from "@/components/tracked-link";
 import type { Metadata } from "next";
 import { paginate, normalizePage } from "@/lib/pagination";
 import { ChevronRight } from "lucide-react";
@@ -71,9 +71,11 @@ export default async function BlogPage({
                 const indexNumber = (pagination.page - 1) * PAGE_SIZE + id + 1;
                 return (
                   <BlurFade delay={BLUR_FADE_DELAY * 3 + id * 0.05} key={slug}>
-                    <Link
+                    <TrackedLink
                       className="flex items-start gap-x-2 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                       href={`/blog/${slug}`}
+                      event="blog_post_click"
+                      eventParams={{ slug, title: post.title, position: indexNumber }}
                     >
                       <span className="text-xs font-mono tabular-nums font-medium mt-[5px]">
                         {String(indexNumber).padStart(2, "0")}.
@@ -92,7 +94,7 @@ export default async function BlogPage({
                           {post.publishedAt}
                         </p>
                       </div>
-                    </Link>
+                    </TrackedLink>
                   </BlurFade>
                 );
               })}
@@ -108,24 +110,28 @@ export default async function BlogPage({
                 </div>
                 <div className="flex gap-2 sm:justify-end">
                   {pagination.hasPreviousPage ? (
-                    <Link
+                    <TrackedLink
                       href={`/blog?page=${pagination.page - 1}`}
                       className="h-8 w-fit px-2 flex items-center justify-center text-sm border border-border rounded-lg hover:bg-accent/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      event="blog_pagination_click"
+                      eventParams={{ direction: "previous", to_page: pagination.page - 1 }}
                     >
                       Previous
-                    </Link>
+                    </TrackedLink>
                   ) : (
                     <span className="h-8 w-fit px-2 flex items-center justify-center text-sm border border-border rounded-lg opacity-50 cursor-not-allowed">
                       Previous
                     </span>
                   )}
                   {pagination.hasNextPage ? (
-                    <Link
+                    <TrackedLink
                       href={`/blog?page=${pagination.page + 1}`}
                       className="h-8 w-fit px-2 flex items-center justify-center text-sm border border-border rounded-lg hover:bg-accent/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      event="blog_pagination_click"
+                      eventParams={{ direction: "next", to_page: pagination.page + 1 }}
                     >
                       Next
-                    </Link>
+                    </TrackedLink>
                   ) : (
                     <span className="h-8 w-fit px-2 flex items-center justify-center text-sm border border-border rounded-lg opacity-50 cursor-not-allowed">
                       Next

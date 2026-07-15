@@ -7,6 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import Markdown from "react-markdown";
+import { trackEvent } from "@/lib/analytics";
 
 function getInitials(title: string) {
   return title
@@ -91,6 +92,9 @@ export function ProjectCard({
           rel="noopener noreferrer"
           className="block"
           aria-label={`Open ${title}`}
+          onClick={() =>
+            trackEvent("project_click", { project: title, href, area: "media" })
+          }
         >
           {video ? (
             <video
@@ -117,7 +121,14 @@ export function ProjectCard({
                 key={idx}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  trackEvent("project_link_click", {
+                    project: title,
+                    link_type: link.type,
+                    href: link.href,
+                  });
+                }}
               >
                 <Badge
                   className="flex items-center gap-1.5 text-xs bg-black text-white hover:bg-black/90"
@@ -143,6 +154,9 @@ export function ProjectCard({
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             aria-label={`Open ${title}`}
+            onClick={() =>
+              trackEvent("project_click", { project: title, href, area: "title" })
+            }
           >
             <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>

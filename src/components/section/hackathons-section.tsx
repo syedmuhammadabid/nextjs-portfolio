@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
+import { TrackedLink } from "@/components/tracked-link";
 import Image from "next/image";
 import { DATA } from "@/data/resume";
 import { Timeline, TimelineItem, TimelineConnectItem } from "@/components/timeline";
@@ -60,17 +60,23 @@ export default function HackathonsSection() {
                 {hackathon.links && hackathon.links.length > 0 && (
                   <div className="mt-1 flex flex-row flex-wrap items-start gap-2">
                     {hackathon.links.map((link) => (
-                      <Link
+                      <TrackedLink
                         href={link.href}
                         key={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
+                        event="hackathon_link_click"
+                        eventParams={{
+                          hackathon: hackathon.title,
+                          link_type: link.title,
+                          href: link.href,
+                        }}
                       >
                         <Badge className="flex items-center gap-1.5 text-xs bg-primary text-primary-foreground">
                           {link.icon}
                           {link.title}
                         </Badge>
-                      </Link>
+                      </TrackedLink>
                     ))}
                   </div>
                 )}
