@@ -78,6 +78,7 @@ export function JsonLd() {
         name: `${DATA.name} — ${DATA.jobTitle}`,
         isPartOf: { "@id": websiteId },
         about: { "@id": personId },
+        mainEntity: { "@id": personId },
         inLanguage: "en",
       },
     ],
