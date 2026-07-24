@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Syed Muhammad Abid — Portfolio</h1>
+  <h1>Syed Muhammad Abid - Portfolio</h1>
   <p><strong>Senior Full-Stack Engineer</strong> · Karachi, Pakistan</p>
   <p>
     <a href="https://syedmuhammadabid.dev">Live Site</a> ·
@@ -28,12 +28,12 @@ Personal portfolio and blog of **Syed Muhammad Abid Hussain**, a Senior Full-Sta
 
 ## Features
 
-- ⚡ **Fast & SEO-optimized** — SSR/SSG, structured data (JSON-LD), OpenGraph images, sitemap, and robots.txt
+- ⚡ **Fast & SEO-optimized** - SSR/SSG, structured data (JSON-LD), OpenGraph images, sitemap, and robots.txt
 - 📝 **MDX blog** with paginated post list, prev/next navigation, and code blocks
 - 🎨 **Light / dark / system** theme with a dock-style navbar
 - 📊 **Google Analytics 4** with named events on every actionable item (nav, social, projects, blog, theme toggle, etc.) plus a global click tracker
 - 📱 **Fully responsive** across devices
-- 🛠️ **Single-file config** — edit your entire profile in [`src/data/resume.tsx`](./src/data/resume.tsx)
+- 🛠️ **Single-file config** - edit your entire profile in [`src/data/resume.tsx`](./src/data/resume.tsx)
 
 ## Getting Started
 
@@ -70,7 +70,7 @@ Personal portfolio and blog of **Syed Muhammad Abid Hussain**, a Senior Full-Sta
 
    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-5. **Personalize** by editing [`src/data/resume.tsx`](./src/data/resume.tsx) — name, work experience, projects, skills, education, and social links.
+5. **Personalize** by editing [`src/data/resume.tsx`](./src/data/resume.tsx) - name, work experience, projects, skills, education, and social links.
 
 ## Scripts
 
@@ -96,7 +96,7 @@ public/             # Static assets (images, fonts)
 
 ## Analytics
 
-Google Analytics is wired up via `@next/third-parties`. It only loads when `NEXT_PUBLIC_GA_ID` is set. Beyond GA4's built-in enhanced measurement (page views, scrolls, outbound clicks), the site sends **named events** for key interactions — e.g. `project_click`, `social_click`, `blog_post_click`, `theme_toggle` — and a global tracker captures every other click as `ui_click`. To surface custom parameters in reports, register them as custom dimensions in **GA → Admin → Custom definitions**.
+Google Analytics is wired up via `@next/third-parties`. It only loads when `NEXT_PUBLIC_GA_ID` is set. Beyond GA4's built-in enhanced measurement (page views, scrolls, outbound clicks), the site sends **named events** for key interactions - e.g. `project_click`, `social_click`, `blog_post_click`, `theme_toggle` - and a global tracker captures every other click as `ui_click`. To surface custom parameters in reports, register them as custom dimensions in **GA → Admin → Custom definitions**.
 
 ## License
 

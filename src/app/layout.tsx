@@ -93,7 +93,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
     // Keyword-led default title for the home document.
-    default: `${DATA.name} — ${DATA.jobTitle} | React, Next.js & Node.js`,
+    default: `${DATA.name} - ${DATA.jobTitle} | React, Next.js & Node.js`,
     // Child routes render as "Page Title | Syed Muhammad Abid".
     template: `%s | ${DATA.name}`,
   },
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: `${DATA.name} — ${DATA.jobTitle}`,
+    title: `${DATA.name} - ${DATA.jobTitle}`,
     description: DATA.description,
     url: DATA.url,
     siteName: `${DATA.name}`,
@@ -134,7 +134,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${DATA.name} — ${DATA.jobTitle}`,
+    title: `${DATA.name} - ${DATA.jobTitle}`,
     description: DATA.description,
     creator: "@syedmuhammadabid",
   },
@@ -148,7 +148,7 @@ export const metadata: Metadata = {
   // Links the generated PWA manifest (app/manifest.ts).
   manifest: "/manifest.webmanifest",
   // Search-engine ownership verification. Paste ONLY the token (the `content`
-  // value) from each tool — Next.js renders the correct <meta> tag for you.
+  // value) from each tool - Next.js renders the correct <meta> tag for you.
   //   • google → Google Search Console → "HTML tag" method
   //   • other["msvalidate.01"] → Bing Webmaster Tools → "meta tag" method
   //   • yandex → Yandex Webmaster (optional)

@@ -17,7 +17,7 @@ const GithubIcon = Icons.github;
 
 export const DATA = {
   name: "Syed Muhammad Abid",
-  // Full legal name — surfaced in Schema.org Person markup so search/AI engines
+  // Full legal name - surfaced in Schema.org Person markup so search/AI engines
   // can associate the brand ("Syed Muhammad Abid") with the full identity.
   fullName: "Syed Muhammad Abid Hussain",
   initials: "SA",
@@ -170,7 +170,7 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
     {
       school: "NED University of Engineering and Technology",
       href: "https://www.neduet.edu.pk",
-      degree: "Master of Science — Data Science",
+      degree: "Master of Science - Data Science",
       logoUrl: "/nedLogo.png",
       start: "2024",
       end: "2026",
@@ -178,7 +178,7 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
     {
       school: "University of Karachi (UBIT)",
       href: "https://ubit.uok.edu.pk",
-      degree: "Bachelor of Engineering — Software Engineering",
+      degree: "Bachelor of Engineering - Software Engineering",
       logoUrl: "/ubitLogo.jpg",
       start: "2015",
       end: "2018",

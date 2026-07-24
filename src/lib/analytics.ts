@@ -3,7 +3,7 @@
  *
  * The measurement ID is read from the public env var so it is available in the
  * browser bundle. Leaving it empty disables GA entirely (no script is injected,
- * no events are sent) — handy for local development or preview deploys.
+ * no events are sent) - handy for local development or preview deploys.
  */
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
 

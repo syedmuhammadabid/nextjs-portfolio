@@ -7,8 +7,8 @@ import { trackEvent } from "@/lib/analytics";
  * Global interaction tracker.
  *
  * Attaches a single delegated listener (capture phase) to the document so every
- * click/auxclick anywhere on the page is captured — including elements added
- * later — without wiring handlers into individual components. For each event it
+ * click/auxclick anywhere on the page is captured - including elements added
+ * later - without wiring handlers into individual components. For each event it
  * resolves the nearest meaningful target (link, button, or labelled control),
  * derives a human-readable label plus the enclosing <section> id, and forwards a
  * GA4 event.

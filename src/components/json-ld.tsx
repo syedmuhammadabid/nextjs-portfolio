@@ -16,13 +16,13 @@ export function JsonLd() {
   const personId = `${DATA.url}/#person`;
   const websiteId = `${DATA.url}/#website`;
 
-  // Every social profile the person controls — `sameAs` is the strongest signal
+  // Every social profile the person controls - `sameAs` is the strongest signal
   // for entity reconciliation across the web.
   const sameAs = Object.values(DATA.contact.social)
     .map((s) => s.url)
     .filter((url) => url.startsWith("http"));
 
-  // Topics the person is an authority on — drives topical relevance for AI search.
+  // Topics the person is an authority on - drives topical relevance for AI search.
   const knowsAbout = DATA.skills.map((skill) => skill.name);
 
   // Most recent role, used to populate `worksFor`.
@@ -67,7 +67,7 @@ export function JsonLd() {
         "@type": "WebSite",
         "@id": websiteId,
         url: DATA.url,
-        name: `${DATA.name} — ${DATA.jobTitle}`,
+        name: `${DATA.name} - ${DATA.jobTitle}`,
         description: DATA.description,
         inLanguage: "en",
         publisher: { "@id": personId },
@@ -75,7 +75,7 @@ export function JsonLd() {
       {
         "@type": "ProfilePage",
         url: DATA.url,
-        name: `${DATA.name} — ${DATA.jobTitle}`,
+        name: `${DATA.name} - ${DATA.jobTitle}`,
         isPartOf: { "@id": websiteId },
         about: { "@id": personId },
         mainEntity: { "@id": personId },

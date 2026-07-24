@@ -23,8 +23,8 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
                 yOffset={8}
-                // Rendered as the single page <h1> — the primary on-page ranking
-                // signal — while keeping the existing visual style.
+                // Rendered as the single page <h1> - the primary on-page ranking
+                // signal - while keeping the existing visual style.
                 as="h1"
                 text={`Hi, I'm ${DATA.name.split(" ")[2]}`}
               />
