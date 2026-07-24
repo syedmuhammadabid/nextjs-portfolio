@@ -210,11 +210,22 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
     updateCanvasSize()
 
     let lastTime = 0
+    let lastDraw = 0
+    // Cap the flicker redraw rate. The effect is random noise, so a lower frame
+    // rate is visually indistinguishable while cutting per-frame canvas paint
+    // work (and main-thread time) to a fraction of a full 60fps rAF loop.
+    const frameInterval = 1000 / 24
+
     const animate = (time: number) => {
       if (!isInView) return
 
+      animationFrameId = requestAnimationFrame(animate)
+
+      if (time - lastDraw < frameInterval) return
+
       const deltaTime = (time - lastTime) / 1000
       lastTime = time
+      lastDraw = time
 
       updateSquares(gridParams.squares, deltaTime)
       drawGrid(
@@ -226,8 +237,24 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
         gridParams.squares,
         gridParams.dpr
       )
+    }
+
+    const startAnimation = () => {
+      cancelAnimationFrame(animationFrameId)
+      lastTime = 0
+      lastDraw = 0
       animationFrameId = requestAnimationFrame(animate)
     }
+
+    // Stop burning CPU while the tab is backgrounded; resume on return.
+    const handleVisibility = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(animationFrameId)
+      } else if (isInView && canAnimate) {
+        startAnimation()
+      }
+    }
+    document.addEventListener("visibilitychange", handleVisibility)
 
     const resizeObserver = new ResizeObserver(() => {
       updateCanvasSize()
@@ -245,13 +272,14 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
     intersectionObserver.observe(canvas)
 
     if (isInView && canAnimate) {
-      animationFrameId = requestAnimationFrame(animate)
+      startAnimation()
     }
 
     return () => {
       cancelAnimationFrame(animationFrameId)
       resizeObserver.disconnect()
       intersectionObserver.disconnect()
+      document.removeEventListener("visibilitychange", handleVisibility)
     }
   }, [setupCanvas, updateSquares, drawGrid, width, height, isInView, canAnimate])
 

@@ -7,6 +7,9 @@ interface BlurFadeProps {
   duration?: number;
   delay?: number;
   yOffset?: number;
+  // Use the opacity-preserving entrance for above-the-fold LCP elements so the
+  // element stays a valid Largest Contentful Paint candidate.
+  eager?: boolean;
 }
 
 const BlurFade = ({
@@ -15,10 +18,11 @@ const BlurFade = ({
   duration = 0.4,
   delay = 0,
   yOffset = 6,
+  eager = false,
 }: BlurFadeProps) => {
   return (
     <div
-      className={cn("blur-fade", className)}
+      className={cn(eager ? "blur-fade-eager" : "blur-fade", className)}
       style={
         {
           "--blur-fade-delay": `${0.04 + delay}s`,

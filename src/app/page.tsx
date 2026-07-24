@@ -26,15 +26,17 @@ export default function Page() {
                 // Rendered as the single page <h1> - the primary on-page ranking
                 // signal - while keeping the existing visual style.
                 as="h1"
+                eager
                 text={`Hi, I'm ${DATA.name.split(" ")[2]}`}
               />
               <BlurFadeText
                 className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
                 delay={BLUR_FADE_DELAY}
+                eager
                 text={DATA.description}
               />
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
+            <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2" eager>
               <Image
                 alt={DATA.name}
                 src={DATA.avatarUrl}

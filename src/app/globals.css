@@ -251,8 +251,29 @@
   animation-delay: var(--blur-fade-delay, 0s);
 }
 
+/* Eager variant for above-the-fold LCP elements: animates the slide only and
+   never drops opacity below 1, so the element remains a valid Largest
+   Contentful Paint candidate (elements at opacity:0 are excluded from LCP). */
+@keyframes blur-fade-in-eager {
+  from {
+    transform: translateY(var(--blur-fade-y, -6px));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.blur-fade-eager {
+  animation: blur-fade-in-eager var(--blur-fade-duration, 0.4s) ease-out both;
+  animation-delay: var(--blur-fade-delay, 0s);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .blur-fade {
+    animation: none;
+  }
+
+  .blur-fade-eager {
     animation: none;
   }
 }

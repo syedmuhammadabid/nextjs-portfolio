@@ -270,7 +270,7 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
           icon: <GithubIcon className="size-3" />,
         },
       ],
-      image: "https://raw.githubusercontent.com/syedmuhammadabid/motivational-quotes-api/main/demo.gif",
+      image: "/motivational-quotes-demo.webp",
       video: "",
     },
     // {

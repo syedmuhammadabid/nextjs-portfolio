@@ -10,6 +10,9 @@ interface BlurFadeTextProps {
   // Lets callers control the rendered element (e.g. render the hero greeting as
   // an <h1>) without changing the visual styling. Defaults to a <span>.
   as?: ElementType;
+  // Use the opacity-preserving entrance for above-the-fold LCP elements so the
+  // element stays a valid Largest Contentful Paint candidate.
+  eager?: boolean;
 }
 
 const BlurFadeText = ({
@@ -19,11 +22,16 @@ const BlurFadeText = ({
   delay = 0,
   yOffset = 8,
   as: Component = "span",
+  eager = false,
 }: BlurFadeTextProps) => {
   return (
     <div className="flex">
       <Component
-        className={cn("blur-fade inline-block", className)}
+        className={cn(
+          eager ? "blur-fade-eager" : "blur-fade",
+          "inline-block",
+          className
+        )}
         style={
           {
             "--blur-fade-delay": `${delay}s`,

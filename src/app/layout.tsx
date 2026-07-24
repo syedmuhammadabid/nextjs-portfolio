@@ -186,8 +186,7 @@ export default function RootLayout({
         {/* Site-wide structured data (Person + WebSite + ProfilePage) so search
             engines and AI answer engines can build a rich entity for the brand. */}
         <JsonLd />
-        {/* Speed up the first connection to Google Fonts (used by next/font) and
-            the GitHub asset host used for project media/avatars. */}
+        {/* Speed up the first connection to Google Fonts (used by next/font). */}
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
@@ -197,12 +196,6 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <link
-          rel="preconnect"
-          href="https://raw.githubusercontent.com"
-          crossOrigin="anonymous"
-        />
-        <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
       </head>
       <body
         className={cn(
