@@ -8,6 +8,10 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Optimised images default to a 60s cache TTL, which trips Lighthouse's
+    // "Use efficient cache lifetimes" audit. Cache optimised variants for a
+    // year — the URL fingerprints on the underlying source, so this is safe.
+    minimumCacheTTL: 31536000,
   },
   async headers() {
     return [
@@ -29,6 +33,17 @@ const nextConfig = {
           {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+      {
+        // Long-lived, immutable caching for static assets in /public
+        // (images, fonts, icons). Addresses "Use efficient cache lifetimes".
+        source: "/:path*.(png|jpg|jpeg|gif|webp|avif|svg|ico|ttf|woff|woff2)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
           },
         ],
       },
