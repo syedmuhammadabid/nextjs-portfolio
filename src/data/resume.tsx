@@ -36,25 +36,23 @@ export const DATA = {
   },
   description:
     "Senior Full-Stack Engineer building scalable React, Next.js & Node.js applications that power enterprise SaaS.",
-  summary: `## Turning complex software into scalable, maintainable systems.
+  summary: `## I care about the 100 milliseconds most engineers don't.
 
-I'm a Senior Full-Stack Engineer with over seven years of experience designing and delivering enterprise web applications using React, Next.js, Node.js, Ruby on Rails, and AWS.
+Over seven years, I've built and hardened the frontend layer of enterprise applications, from subscription platforms used by European publishers to e-commerce products serving tens of millions of monthly users at Daraz (Alibaba Group). My focus: interfaces that are fast, resilient, and genuinely pleasant to use, even at scale.
 
-Throughout my career, I've worked on products serving thousands to millions of users, helping organizations modernize legacy platforms, improve engineering workflows, and deliver software faster without compromising reliability.
+A few numbers that back that up:
 
-Some of the initiatives I'm most proud of include:
+✅ Cut JavaScript bundle size 45% and frontend build time from 4 minutes to under 90 seconds through Webpack code-splitting and build pipeline optimization
 
-✅ **Modernized** two production Rails applications, eliminating **14+ critical security vulnerabilities**
+✅ Improved application load performance 40% through component and architectural refactoring
 
-✅ **Reduced** JavaScript bundle size by **45%** while cutting frontend build time from **4 minutes to under 90 seconds**
+✅ Modernized two production applications' frontend stacks as part of a Rails 5.2→7.2 migration, closing 14+ security vulnerabilities along the way
 
-✅ **Improved** application performance by **40%** through architectural refactoring
+✅ Built reusable component systems and design patterns adopted across multiple product teams
 
-✅ **Designed** AWS infrastructure using Terraform across multiple production environments
+✅ Delivered full-stack features end-to-end, React, Redux, and REST APIs, while owning the frontend architecture
 
-✅ **Built** CI/CD pipelines with automated testing, security scanning, and deployments
-
-I recently completed my Master's in Data Science, expanding my expertise into machine learning, data engineering, and AI-enabled software systems. I'm particularly interested in building intelligent applications where modern software engineering meets data and AI.`,
+I also hold an MS in Data Science, which gives me an edge building data-dense interfaces, dashboards, analytics tools, and AI-powered products, without losing sight of what makes an interface fast and usable in the first place.`,
   avatarUrl: "/me.png",
   skills: [
     { name: "React", icon: ReactLight },
@@ -186,9 +184,53 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
   ],
   projects: [
     {
+      title: "HiiBo - Personal AI Assistant",
+      href: "https://chat.hiibo.app/",
+      dates: "Jan 2026 - Present",
+      active: true,
+      description:
+        "Personal AI assistant making LLM tools accessible to non-technical users and built prompt assistance, memory management, and customizable AI experiences.",
+      technologies: [
+        "React",
+        "Typescript",
+        "Redux RTK Query",
+        "AI/LLM Integration",
+        "AI/LLM APIs"
+      ],
+      links: [],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Restaurant Menu Semantic Search",
+      href: "https://github.com/syedmuhammadabid/restaurant-menu-search",
+      dates: "June 2026",
+      active: true,
+      description:
+        "Semantic search engine over a real restaurant menu (209 items) using Qdrant vector DB, Sentence Transformers, FastAPI, and a Next.js frontend.",
+      technologies: [
+        "Next.js",
+        "FastAPI",
+        "Qdrant Vector DB",
+        "Sentence Transformers",
+        "Python",
+        "TailwindCSS",
+        "Docker",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/syedmuhammadabid/restaurant-menu-search",
+          icon: <GithubIcon className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
       title: "Enterprise Publishing & Subscription Platform",
       href: "https://mytype.kayak.atexcloud.io/",
-      dates: "Nov 2024 - Present",
+      dates: "Nov 2024 - June 2026",
       active: true,
       description:
         "Full-stack subscription lifecycle management covering customer onboarding, invoicing, accounts receivable, and renewal workflows for European publisher clients. Distribution management system with configurable campaign banners, upsell flows, and multi-brand product landing pages.",
@@ -207,20 +249,27 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
       video: "",
     },
     {
-      title: "Subscription Management API",
-      href: "https://github.com/syedmuhammadabid/subscription-api",
-      dates: "2025",
-      active: true,
+      title: "PSX Fundamental Analysis Platform",
+      href: "https://github.com/syedmuhammadabid/psx-value-investor-platform",
+      dates: "2025 - Present",
+      active: false,
       description:
-        "Built a RESTful subscription management API using ASP.NET Core Web API and C#, with a PostgreSQL data layer, applying enterprise patterns (DI, layered architecture, EF Core) to deepen hands-on experience with the .NET ecosystem.",
+        "Developing a stock analysis platform for the Pakistan Stock Exchange with financial analysis, valuation ratios, technical indicators, dividend history, and AI-powered insights.",
       technologies: [
-        "ASP.NET Core",
-        "C#",
+        "Next.js",
+        "TypeScript",
+        "Python",
         "PostgreSQL",
-        "Entity Framework Core",
-        "REST API",
+        "AI/LLM",
+        "TailwindCSS",
       ],
-      links: [],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/syedmuhammadabid/psx-value-investor-platform",
+          icon: <GithubIcon className="size-3" />,
+        },
+      ],
       image: "",
       video: "",
     },
@@ -239,57 +288,63 @@ I recently completed my Master's in Data Science, expanding my expertise into ma
         "Google Drive API",
         "Pandas",
       ],
-      links: [],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/syedmuhammadabid//etl-pipeline",
+          icon: <GithubIcon className="size-3" />,
+        },
+      ],
       image: "",
       video: "",
     },
     {
-      title: "Motivational Quotes API",
-      href: "https://motivational-quotes.up.railway.app/",
-      dates: "2026",
+      title: "Subscription Management API",
+      href: "https://github.com/syedmuhammadabid/subscription-api",
+      dates: "2025",
       active: true,
       description:
-        "A simple REST API built with FastAPI that serves random motivational quotes, with an interactive UI to browse and discover them.",
+        "Built a RESTful subscription management API using ASP.NET Core Web API and C#, with a PostgreSQL data layer, applying enterprise patterns (DI, layered architecture, EF Core) to deepen hands-on experience with the .NET ecosystem.",
       technologies: [
-        "Next.js",
-        "TypeScript",
-        "Python",
-        "FastAPI",
+        "ASP.NET Core",
+        "C#",
+        "PostgreSQL",
+        "Entity Framework Core",
         "REST API",
-        "TailwindCSS",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://motivational-quotes.up.railway.app/",
-          icon: <GlobeIcon className="size-3" />,
-        },
-        {
           type: "Source",
-          href: "https://github.com/syedmuhammadabid/motivational-quotes-api",
+          href: "https://github.com/syedmuhammadabid/subscription-api",
           icon: <GithubIcon className="size-3" />,
         },
       ],
-      image: "/motivational-quotes-demo.webp",
+      image: "",
       video: "",
     },
     // {
-    //   title: "PSX Fundamental Analysis Platform",
-    //   href: "#",
-    //   dates: "2025 - Present",
-    //   active: false,
+    //   title: "Motivational Quotes API",
+    //   href: "https://github.com/syedmuhammadabid/motivational-quotes-api",
+    //   dates: "2026",
+    //   active: true,
     //   description:
-    //     "Developing a stock analysis platform for the Pakistan Stock Exchange with financial analysis, valuation ratios, technical indicators, dividend history, and AI-powered insights.",
+    //     "A simple REST API built with FastAPI that serves random motivational quotes, with an interactive UI to browse and discover them.",
     //   technologies: [
     //     "Next.js",
     //     "TypeScript",
     //     "Python",
-    //     "PostgreSQL",
-    //     "AI/LLM",
+    //     "FastAPI",
+    //     "REST API",
     //     "TailwindCSS",
     //   ],
-    //   links: [],
-    //   image: "",
+    //   links: [
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/syedmuhammadabid/motivational-quotes-api",
+    //       icon: <GithubIcon className="size-3" />,
+    //     },
+    //   ],
+    //   image: "/motivational-quotes-demo.webp",
     //   video: "",
     // },
   ],
