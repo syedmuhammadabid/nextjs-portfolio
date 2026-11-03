@@ -19,11 +19,15 @@ import { GA_MEASUREMENT_ID, isAnalyticsEnabled } from "@/lib/analytics";
 const KEYWORDS = [
   // Primary role / positioning
   "Senior Full Stack Engineer",
+  "Technical Consultant",
+  "Founder & Technical Lead",
+  "Intelicoder",
   "Senior React Developer",
   "React Developer",
   "Next.js Developer",
   "Node.js Developer",
   "TypeScript Developer",
+  "Angular Developer",
   "JavaScript Developer",
   "Frontend Engineer",
   "Backend Engineer",
@@ -40,6 +44,8 @@ const KEYWORDS = [
   "Terraform",
   "Ruby on Rails",
   "PostgreSQL",
+  "Python",
+  "Data Science",
   "REST API",
   "GraphQL",
   "Cloud Engineer",
@@ -60,6 +66,7 @@ const KEYWORDS = [
   "Generative AI",
   "Data Engineering",
   "Python Developer",
+  "AI/LLM Integration",
   // Location & availability
   "Full Stack Developer Pakistan",
   "React Developer Pakistan",

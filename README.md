@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Syed Muhammad Abid - Portfolio</h1>
-  <p><strong>Senior Full-Stack Engineer</strong> · Karachi, Pakistan</p>
+  <p><strong>Senior Full-Stack Engineer &amp; Technical Consultant</strong> · Karachi, Pakistan</p>
   <p>
     <a href="https://syedmuhammadabid.dev">Live Site</a> ·
     <a href="https://linkedin.com/in/syedmuhammadabid">LinkedIn</a> ·
@@ -12,7 +12,7 @@
 
 ## About
 
-Personal portfolio and blog of **Syed Muhammad Abid Hussain**, a Senior Full-Stack Engineer with 7+ years of experience building scalable React, Next.js, and Node.js applications that power enterprise SaaS. The site showcases work experience, projects, skills, and long-form writing on software engineering.
+Personal portfolio and blog of **Syed Muhammad Abid Hussain**, a Senior Full-Stack Engineer, Founder, and Technical Consultant with 7+ years of experience building SaaS products, modern web applications, AI-powered workflows, and reliable AWS infrastructure. The site showcases work experience, projects, skills, and long-form writing on software engineering.
 
 🔗 **Live at [syedmuhammadabid.dev](https://syedmuhammadabid.dev)**
 
