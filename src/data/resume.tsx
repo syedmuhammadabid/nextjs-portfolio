@@ -11,6 +11,7 @@ import { RubyOnRails } from "@/components/ui/svgs/rubyOnRails";
 import { Aws } from "@/components/ui/svgs/aws";
 import { Terraform } from "@/components/ui/svgs/terraform";
 import { GithubActions } from "@/components/ui/svgs/githubActions";
+import { AngularIcon } from "@/components/ui/svgs/angularIcon";
 
 const GlobeIcon = Icons.globe;
 const GithubIcon = Icons.github;
@@ -25,7 +26,7 @@ export const DATA = {
   // profile) because it powers `metadataBase`, canonical URLs, Open Graph
   // `og:url`, sitemap entries and every absolute URL used for SEO.
   url: "https://syedmuhammadabid.dev",
-  jobTitle: "Senior Full-Stack Engineer",
+  jobTitle: "Senior Full-Stack Engineer & Technical Consultant",
   location: "Karachi, Pakistan",
   locationLink: "https://www.google.com/maps/place/karachi",
   // Structured address used by the Schema.org PostalAddress node.
@@ -35,32 +36,43 @@ export const DATA = {
     country: "PK",
   },
   description:
-    "Senior Full-Stack Engineer building scalable React, Next.js & Node.js applications that power enterprise SaaS.",
-  summary: `## I care about the 100 milliseconds most engineers don't.
+    "Senior Full-Stack Engineer and Founder & Technical Lead at Intelicoder. I help businesses build SaaS products, modern web applications, AI-powered workflows, and reliable AWS infrastructure.",
+  summary: `## I build software that helps businesses move forward.
 
-Over seven years, I've built and hardened the frontend layer of enterprise applications, from subscription platforms used by European publishers to e-commerce products serving tens of millions of monthly users at Daraz (Alibaba Group). My focus: interfaces that are fast, resilient, and genuinely pleasant to use, even at scale.
+I'm a Senior Full-Stack Engineer and the Founder & Technical Lead at Intelicoder, a software development and technology consulting practice. With 7+ years of experience, I work across the product lifecycle—from understanding business requirements and designing application architecture to building, deploying, and improving production software.
 
-A few numbers that back that up:
+I help founders and businesses with:
 
-✅ Cut JavaScript bundle size 45% and frontend build time from 4 minutes to under 90 seconds through Webpack code-splitting and build pipeline optimization
+- **SaaS & full-stack development:** Product development, subscription platforms, customer portals, dashboards, and API-driven applications.
+- **AI integrations:** Practical LLM-powered features, AI assistants, semantic search, and workflow automation.
+- **Cloud & DevOps:** AWS architecture, infrastructure as code with Terraform, Docker, and CI/CD automation.
+- **Modernization:** Frontend and backend upgrades, performance optimization, maintainability, and application security.
 
-✅ Improved application load performance 40% through component and architectural refactoring
+A few outcomes from my engineering work:
 
-✅ Modernized two production applications' frontend stacks as part of a Rails 5.2→7.2 migration, closing 14+ security vulnerabilities along the way
+- Reduced JavaScript bundle size by 45% and cut frontend build times from 4 minutes to under 90 seconds.
+- Improved application load performance by 40% through component and architectural refactoring.
+- Modernized production applications from Rails 5.2 to 7.2 and Ruby 2.6 to 3.2, addressing 14+ security vulnerabilities.
+- Designed and deployed AWS infrastructure using Terraform, including ECS Fargate, RDS, ALB, S3, and CloudWatch.
+- Built full-stack product features across React, TypeScript, Node.js, Ruby on Rails, and REST APIs.
 
-✅ Built reusable component systems and design patterns adopted across multiple product teams
+I hold an MS in Data Science from NED University, alongside a BS in Software Engineering. This background supports my work on data-intensive applications, analytics products, and AI-enabled software.
 
-✅ Delivered full-stack features end-to-end, React, Redux, and REST APIs, while owning the frontend architecture
+I'm open to collaborating with SaaS founders and businesses on software projects, technical consulting, and long-term development partnerships. I'm also open to relevant remote senior engineering opportunities.
 
-I also hold an MS in Data Science, which gives me an edge building data-dense interfaces, dashboards, analytics tools, and AI-powered products, without losing sight of what makes an interface fast and usable in the first place.`,
+**Portfolio:** https://www.syedmuhammadabid.dev/
+
+**Agency:** https://www.intelicoder.com/`,
+
   avatarUrl: "/me.png",
   skills: [
     { name: "React", icon: ReactLight },
-    { name: "Next.js", icon: NextjsIconDark },
-    { name: "TypeScript", icon: Typescript },
     { name: "Node.js", icon: Nodejs },
-    { name: "Ruby on Rails", icon: RubyOnRails },
     { name: "AWS", icon: Aws },
+    { name: "Next.js", icon: NextjsIconDark },
+    { name: "Angular", icon: AngularIcon },
+    { name: "TypeScript", icon: Typescript },
+    { name: "Ruby on Rails", icon: RubyOnRails },
     { name: "Terraform", icon: Terraform },
     { name: "Docker", icon: Docker },
     { name: "PostgreSQL", icon: Postgresql },
@@ -89,9 +101,9 @@ I also hold an MS in Data Science, which gives me an edge building data-dense in
       },
       X: {
         name: "X",
-        url: "#",
+        url: "https://x.com/syedmabid",
         icon: Icons.x,
-        navbar: false,
+        navbar: true,
       },
       Email: {
         name: "Send Email",
@@ -104,6 +116,18 @@ I also hold an MS in Data Science, which gives me an edge building data-dense in
 
   work: [
     {
+      company: "Intelicoder",
+      href: "https://www.intelicoder.com",
+      badges: ["Founder-led", "Remote"],
+      location: "Karachi, Pakistan · Remote",
+      title: "Founder & Technical Lead",
+      logoUrl: "/intelicoderLogo.png",
+      start: "August 2026",
+      end: "Present",
+      description:
+        "Founded Intelicoder as a software development and technology consulting practice focused on helping businesses build and improve digital products. Focus areas include SaaS and full-stack application development, AI/LLM integrations, cloud architecture, and DevOps automation. Lead technical discovery, solution architecture, hands-on engineering, implementation planning, and delivery. Work directly with prospective clients to translate business needs into practical, maintainable software solutions.",
+    },
+    {
       company: "Atex Software",
       href: "https://www.atex.com",
       badges: ["Remote"],
@@ -111,9 +135,9 @@ I also hold an MS in Data Science, which gives me an edge building data-dense in
       title: "Senior Software Engineer",
       logoUrl: "/atexLogo.svg",
       start: "November 2024",
-      end: "Present",
+      end: "July 2026",
       description:
-        "Led the migration of two production applications from Rails 5.2 to 7.2 and Ruby 2.6 to 3.2, eliminating 14+ critical security vulnerabilities (CVEs) while reducing CI build times by 20%. Refactored a large-scale Subscription Management module, reducing SonarQube complexity by 35% and improving page load performance by 40%. Optimized the frontend build pipeline using Webpack code splitting and bundle analysis, reducing JavaScript bundle size by 45% and cutting build times from 4 minutes to under 90 seconds. Designed and deployed production-ready AWS infrastructure using Terraform, provisioning ECS Fargate, RDS, ALB, Route53, S3, and CloudWatch across multiple environments. Implemented GitLab CI/CD pipelines with automated testing, security scanning, and code quality checks using SonarQube, Brakeman, and RuboCop. Developed enterprise subscription features including upsell workflows, campaign management, configurable landing pages, Stripe payment integration, and AWS Cognito authentication. Strengthened application security by implementing XSS protection, enforcing coding standards, and resolving high-severity vulnerabilities across frontend and backend services. Mentored engineers through code reviews, architectural guidance, and engineering best practices.",
+        "Owned full-stack engineering work on an enterprise publishing and subscription platform used by European publisher clients. Led the migration of two production applications from Rails 5.2 to 7.2 and Ruby 2.6 to 3.2, addressing 14+ security vulnerabilities and reducing CI build times by 20%. Refactored the Subscription Management module, reducing SonarQube complexity by 35% and improving page-load performance by 40%. Optimized the Webpack build pipeline through code splitting and bundle analysis, reducing JavaScript bundle size by 45% and cutting build times from 4 minutes to under 90 seconds. Designed and deployed AWS infrastructure with Terraform, including ECS Fargate, RDS, ALB, Route 53, S3, and CloudWatch. Built GitLab CI/CD pipelines with automated tests, security scanning, and code-quality checks. Delivered subscription, campaign, upsell, configurable landing-page, Stripe payment, and Cognito authentication features. Contributed to application security, code reviews, and engineering standards.",
     },
     {
       company: "ACCEO Retail Solutions",
@@ -153,7 +177,7 @@ I also hold an MS in Data Science, which gives me an edge building data-dense in
     },
     {
       company: "Ciphers Lab",
-      href: "#",
+      href: "https://www.cipherslab.com",
       badges: [],
       location: "Karachi, Pakistan",
       title: "Software Developer",
@@ -291,7 +315,7 @@ I also hold an MS in Data Science, which gives me an edge building data-dense in
       links: [
         {
           type: "Source",
-          href: "https://github.com/syedmuhammadabid//etl-pipeline",
+          href: "https://github.com/syedmuhammadabid/etl-pipeline",
           icon: <GithubIcon className="size-3" />,
         },
       ],
