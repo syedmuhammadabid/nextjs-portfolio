@@ -26,7 +26,7 @@ export const DATA = {
   // profile) because it powers `metadataBase`, canonical URLs, Open Graph
   // `og:url`, sitemap entries and every absolute URL used for SEO.
   url: "https://syedmuhammadabid.dev",
-  jobTitle: "Senior Full-Stack Engineer & Technical Consultant",
+  jobTitle: "Product Engineer & Technical Consultant | AI & Full-Stack Engineer",
   location: "Karachi, Pakistan",
   locationLink: "https://www.google.com/maps/place/karachi",
   // Structured address used by the Schema.org PostalAddress node.
@@ -36,15 +36,15 @@ export const DATA = {
     country: "PK",
   },
   description:
-    "Senior Full-Stack Engineer and Founder & Technical Lead at Intelicoder. I help businesses build SaaS products, modern web applications, AI-powered workflows, and reliable AWS infrastructure.",
+    "Product engineer and Founder & Technical Lead at Intelicoder. I build full-stack products and AI features end to end: LLM-powered assistants, RAG and semantic search, Python (FastAPI) services, React/Next.js interfaces, and reliable AWS infrastructure.",
   summary: `## I build software that helps businesses move forward.
 
-I'm a Senior Full-Stack Engineer and the Founder & Technical Lead at Intelicoder, a software development and technology consulting practice. With 7+ years of experience, I work across the product lifecycle—from understanding business requirements and designing application architecture to building, deploying, and improving production software.
+I'm a product engineer and the Founder & Technical Lead at Intelicoder, a software development and technology consulting practice. With 7+ years of experience, I own features end to end: from understanding the problem and designing schemas and APIs to building, deploying, and supporting production software.
 
 I help founders and businesses with:
 
-- **SaaS & full-stack development:** Product development, subscription platforms, customer portals, dashboards, and API-driven applications.
-- **AI integrations:** Practical LLM-powered features, AI assistants, semantic search, and workflow automation.
+- **SaaS & full-stack development:** Product development, subscription platforms, customer portals, dashboards, and API-driven applications with React, Next.js, TypeScript, Node.js, and Python (FastAPI).
+- **AI engineering:** LLM-powered features, AI assistants, retrieval-augmented generation (RAG), semantic search with vector databases, and workflow automation, built with attention to reliability, latency, and cost.
 - **Cloud & DevOps:** AWS architecture, infrastructure as code with Terraform, Docker, and CI/CD automation.
 - **Modernization:** Frontend and backend upgrades, performance optimization, maintainability, and application security.
 
@@ -55,8 +55,9 @@ A few outcomes from my engineering work:
 - Modernized production applications from Rails 5.2 to 7.2 and Ruby 2.6 to 3.2, addressing 14+ security vulnerabilities.
 - Designed and deployed AWS infrastructure using Terraform, including ECS Fargate, RDS, ALB, S3, and CloudWatch.
 - Built full-stack product features across React, TypeScript, Node.js, Ruby on Rails, and REST APIs.
+- Built AI projects in Python and FastAPI, including a local RAG API and a semantic search service on a vector database.
 
-I hold an MS in Data Science from NED University, alongside a BS in Software Engineering. This background supports my work on data-intensive applications, analytics products, and AI-enabled software.
+I hold an MS in Data Science (ML, NLP, Generative AI) from NED University, alongside a BS in Software Engineering. This background supports my work on data-intensive applications, analytics products, and AI-enabled software.
 
 I'm open to collaborating with SaaS founders and businesses on software projects, technical consulting, and long-term development partnerships. I'm also open to relevant remote senior engineering opportunities.
 
@@ -67,17 +68,17 @@ I'm open to collaborating with SaaS founders and businesses on software projects
   avatarUrl: "/me.png",
   skills: [
     { name: "React", icon: ReactLight },
-    { name: "Node.js", icon: Nodejs },
-    { name: "AWS", icon: Aws },
     { name: "Next.js", icon: NextjsIconDark },
-    { name: "Angular", icon: AngularIcon },
     { name: "TypeScript", icon: Typescript },
-    { name: "Ruby on Rails", icon: RubyOnRails },
-    { name: "Terraform", icon: Terraform },
-    { name: "Docker", icon: Docker },
+    { name: "Python", icon: Python },
+    { name: "Node.js", icon: Nodejs },
     { name: "PostgreSQL", icon: Postgresql },
+    { name: "AWS", icon: Aws },
+    { name: "Docker", icon: Docker },
+    { name: "Terraform", icon: Terraform },
     { name: "CI/CD", icon: GithubActions },
-    { name: "Python", icon: Python }
+    { name: "Ruby on Rails", icon: RubyOnRails },
+    { name: "Angular", icon: AngularIcon },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -137,7 +138,7 @@ I'm open to collaborating with SaaS founders and businesses on software projects
       start: "November 2024",
       end: "July 2026",
       description:
-        "Owned full-stack engineering work on an enterprise publishing and subscription platform used by European publisher clients. Led the migration of two production applications from Rails 5.2 to 7.2 and Ruby 2.6 to 3.2, addressing 14+ security vulnerabilities and reducing CI build times by 20%. Refactored the Subscription Management module, reducing SonarQube complexity by 35% and improving page-load performance by 40%. Optimized the Webpack build pipeline through code splitting and bundle analysis, reducing JavaScript bundle size by 45% and cutting build times from 4 minutes to under 90 seconds. Designed and deployed AWS infrastructure with Terraform, including ECS Fargate, RDS, ALB, Route 53, S3, and CloudWatch. Built GitLab CI/CD pipelines with automated tests, security scanning, and code-quality checks. Delivered subscription, campaign, upsell, configurable landing-page, Stripe payment, and Cognito authentication features. Contributed to application security, code reviews, and engineering standards.",
+        "Owned full-stack engineering work on an enterprise publishing and subscription platform used by European publisher clients. Led the migration of two production applications from Rails 5.2 to 7.2 and Ruby 2.6 to 3.2, addressing 14+ security vulnerabilities and reducing CI build times by 20%. Owned the Subscription Management module end to end, reducing SonarQube complexity by 35% and improving page-load performance by 40%. Optimized the Webpack build pipeline through code splitting and bundle analysis, reducing JavaScript bundle size by 45% and cutting build times from 4 minutes to under 90 seconds. Designed and deployed AWS infrastructure with Terraform, including ECS Fargate, RDS, ALB, Route 53, S3, and CloudWatch monitoring across multiple environments. Built GitLab CI/CD pipelines with automated tests, security scanning, and code-quality checks. Delivered subscription, campaign, upsell, configurable landing-page, Stripe payment, and Cognito authentication features. Contributed to application security, code reviews, and engineering standards.",
     },
     {
       company: "ACCEO Retail Solutions",
@@ -149,7 +150,7 @@ I'm open to collaborating with SaaS founders and businesses on software projects
       start: "May 2021",
       end: "October 2024",
       description:
-        "Designed and developed a scalable Mobile Point-of-Sale (mPOS) platform supporting virtual carts, inventory search, and shopping cart lifecycle management for retail operations. Built secure financial card management services supporting transaction processing, banking integrations, and unit-tested business workflows. Architected a custom CubeJS query builder backed by PostgreSQL, enabling self-service analytics and dynamic business reporting for enterprise users. Delivered full-stack features using React.js, Redux, Node.js, and REST APIs while collaborating with distributed product, QA, and design teams in an Agile environment. Improved maintainability through reusable component design, modular architecture, and comprehensive unit testing.",
+        "Designed and developed a scalable Mobile Point-of-Sale (mPOS) platform supporting virtual carts, inventory search, and shopping cart lifecycle management for retail operations. Built secure financial card management services supporting transaction processing, banking integrations, and unit-tested business workflows. Architected a custom CubeJS query builder backed by PostgreSQL, enabling self-service analytics and dynamic business reporting for enterprise users and reducing ad hoc reporting requests. Delivered full-stack features using React.js, Redux, Node.js, and REST APIs while collaborating with distributed product, QA, and design teams in an Agile environment. Improved maintainability through reusable component design, modular architecture, and comprehensive unit testing.",
     },
     {
       company: "Daraz (Alibaba Group)",
@@ -161,7 +162,7 @@ I'm open to collaborating with SaaS founders and businesses on software projects
       start: "October 2019",
       end: "April 2021",
       description:
-        "Built Daraz Travel, a full-stack ticket booking platform supporting seat selection, secure payments, booking management, and administrative operations. Developed Daraz University, a content management platform enabling newsletters and seller engagement for tens of thousands of active sellers. Optimized frontend performance and maintained scalable REST APIs serving tens of millions of monthly users across South Asia. Collaborated with cross-functional engineering teams to deliver customer-facing features in a high-traffic, large-scale e-commerce platform.",
+        "Built Daraz Travel, a full-stack ticket booking platform supporting seat selection, secure payments, booking management, and administrative operations, handling thousands of transactions a day. Developed Daraz University, a content management platform enabling newsletters and seller engagement for tens of thousands of active sellers. Optimized frontend performance and maintained scalable REST APIs serving tens of millions of monthly users across South Asia. Collaborated with cross-functional engineering teams to deliver customer-facing features in a high-traffic, large-scale e-commerce platform.",
     },
     {
       company: "Systems Limited",
@@ -213,13 +214,33 @@ I'm open to collaborating with SaaS founders and businesses on software projects
       dates: "Jan 2026 - Present",
       active: true,
       description:
-        "Personal AI assistant making LLM tools accessible to non-technical users and built prompt assistance, memory management, and customizable AI experiences.",
+        "Personal AI assistant making LLM tools accessible to non-technical users, with prompt assistance, memory management, and customizable AI experiences.",
       technologies: [
         "React",
-        "Typescript",
+        "TypeScript",
         "Redux RTK Query",
         "AI/LLM Integration",
-        "AI/LLM APIs"
+        "AI/LLM APIs",
+      ],
+      links: [],
+      image: "",
+      video: "",
+    },
+    {
+      // TODO: replace href/links with the real repo URL and confirm the dates.
+      title: "Local RAG API",
+      href: "https://github.com/syedmuhammadabid",
+      dates: "2026",
+      active: true,
+      description:
+        "Retrieval-augmented generation API that answers questions from private documents using local embeddings and a local LLM. Per-user metadata filtering keeps each user's data separate, and with no hosted AI provider there is no per-token API cost and data stays on the machine.",
+      technologies: [
+        "Python",
+        "FastAPI",
+        "ChromaDB",
+        "Ollama",
+        "RAG",
+        "LLM",
       ],
       links: [],
       image: "",
@@ -231,7 +252,7 @@ I'm open to collaborating with SaaS founders and businesses on software projects
       dates: "June 2026",
       active: true,
       description:
-        "Semantic search engine over a real restaurant menu (209 items) using Qdrant vector DB, Sentence Transformers, FastAPI, and a Next.js frontend.",
+        "Semantic search API over a real restaurant menu (209 items) with relevance scoring and category and price filters, built with Qdrant vector DB, Sentence Transformers, FastAPI, and a Next.js frontend. Runs with a single Docker Compose command.",
       technologies: [
         "Next.js",
         "FastAPI",
@@ -252,40 +273,23 @@ I'm open to collaborating with SaaS founders and businesses on software projects
       video: "",
     },
     {
-      title: "Enterprise Publishing & Subscription Platform",
-      href: "https://mytype.kayak.atexcloud.io/",
-      dates: "Nov 2024 - June 2026",
-      active: true,
-      description:
-        "Full-stack subscription lifecycle management covering customer onboarding, invoicing, accounts receivable, and renewal workflows for European publisher clients. Distribution management system with configurable campaign banners, upsell flows, and multi-brand product landing pages.",
-      technologies: [
-        "React",
-        "Ruby on Rails",
-        "AWS",
-        "Terraform",
-        "Stripe",
-        "Cognito",
-        "PostgreSQL",
-        "Docker",
-      ],
-      links: [],
-      image: "",
-      video: "",
-    },
-    {
-      title: "PSX Fundamental Analysis Platform",
+      title: "PSX Value Investor Platform",
       href: "https://github.com/syedmuhammadabid/psx-value-investor-platform",
       dates: "2025 - Present",
       active: false,
       description:
-        "Developing a stock analysis platform for the Pakistan Stock Exchange with financial analysis, valuation ratios, technical indicators, dividend history, and AI-powered insights.",
+        "Full-stack stock analysis platform for the Pakistan Stock Exchange. The FastAPI REST backend computes intrinsic value from seven valuation models and quality scores (Piotroski F-Score, Altman Z-Score), with JWT authentication, watchlists, saved portfolios, and AI-powered insights. About 98% pytest coverage (80% minimum enforced), with lint and type checks gated in CI.",
       technologies: [
+        "Python",
+        "FastAPI",
+        "SQLAlchemy",
+        "Alembic",
+        "PostgreSQL",
         "Next.js",
         "TypeScript",
-        "Python",
-        "PostgreSQL",
+        "Docker",
+        "GitHub Actions",
         "AI/LLM",
-        "TailwindCSS",
       ],
       links: [
         {
@@ -319,6 +323,27 @@ I'm open to collaborating with SaaS founders and businesses on software projects
           icon: <GithubIcon className="size-3" />,
         },
       ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Enterprise Publishing & Subscription Platform",
+      href: "https://mytype.kayak.atexcloud.io/",
+      dates: "Nov 2024 - June 2026",
+      active: true,
+      description:
+        "Full-stack subscription lifecycle management covering customer onboarding, invoicing, accounts receivable, and renewal workflows for European publisher clients. Distribution management system with configurable campaign banners, upsell flows, and multi-brand product landing pages.",
+      technologies: [
+        "React",
+        "Ruby on Rails",
+        "AWS",
+        "Terraform",
+        "Stripe",
+        "Cognito",
+        "PostgreSQL",
+        "Docker",
+      ],
+      links: [],
       image: "",
       video: "",
     },
